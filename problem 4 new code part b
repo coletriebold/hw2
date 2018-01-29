@@ -1,0 +1,11 @@
+background(255);
+colorMode(HSB);
+noStroke();
+
+var i = 1;
+while (i<10) {
+  var size = height/(i);
+  fill(random(350),255,255);
+  rect(width/2-size/2,height/2-size/2,size,size,random(20));
+  i = i+1;
+}
