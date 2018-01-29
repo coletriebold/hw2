@@ -1,0 +1,49 @@
+background(255);
+colorMode(HSB);
+
+var firstWidth = random(40,80);
+var firstHeight = random(40,80);
+var startX = 0;
+var startY = 0;
+rect(0, 0, firstWidth, firstHeight);
+while(startX<width) {
+  background(0, 0, 255, 0.1);
+  fill(random(360), 255, 255);
+  secondWidth = random(firstWidth,80)
+  secondHeight = random(firstHeight,80)
+  rect(firstWidth,startY,secondWidth,secondHeight)
+  fill(random(360), 255, 255);
+  rect(startX,firstHeight,secondWidth,secondHeight)
+  var firstWidth = random(40,80);
+	var firstHeight = random(40,80);
+  var startX = secondWidth+startX;
+  var startY = secondHeight+startY;
+}
+
+while(startX>0) {
+  background(0, 0, 255, 0.1);
+  fill(random(360), 255, 255);
+  secondWidth = random(firstWidth,80)
+  secondHeight = random(firstHeight,80)
+  rect(firstWidth+80,startY,secondWidth,secondHeight)
+  fill(random(360), 255, 255);
+  rect(startX,firstHeight+80,secondWidth,secondHeight)
+  var firstWidth = random(40,80);
+	var firstHeight = random(40,80);
+  var startX = -secondWidth+startX;
+  var startY = -secondHeight+startY;
+}
+
+while(startX<width) {
+  background(0, 0, 255, 0.1);
+  fill(random(360), 255, 255);
+  secondWidth = random(firstWidth,80)
+  secondHeight = random(firstHeight,80)
+  rect(firstWidth+160,startY,secondWidth,secondHeight)
+  fill(random(360), 255, 255);
+  rect(startX,firstHeight+160,secondWidth,secondHeight)
+  var firstWidth = random(40,80);
+	var firstHeight = random(40,80);
+  var startX = secondWidth+startX;
+  var startY = secondHeight+startY;
+}
